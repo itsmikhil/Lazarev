@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+@custom-variant 2xl (@media (max-width: 96rem));/*1536px*/
+@custom-variant xl (@media (max-width: 80rem));/*1280px*/
+@custom-variant lg (@media (max-width: 64rem));/*1024px*/
+@custom-variant md (@media (max-width: 48rem));/*768px*/
+@custom-variant sm (@media (max-width: 40rem));/*640px*/
+
+body {
+  font-family: sans-serif;
+}
+.scroller-container {
+    animation: scroll 8s linear infinite;
+}
+summary::marker{
+  content: "";
+}
+::-webkit-scrollbar {
+  width: 10px;  /* Vertical scrollbar width */
+  height: 10px; /* Horizontal scrollbar height */
+}
+body::-webkit-scrollbar {
+  background-color: black;
+  width: 9px;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: #0BA34E;
+  border-radius: 10px;
+}
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+details[open]{
+  transition: all 10s linear 0s;
+}
