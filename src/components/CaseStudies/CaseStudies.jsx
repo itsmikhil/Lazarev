@@ -1,14 +1,23 @@
 import React from 'react'
-import CountDiv from './CountDiv'
-import CaseStudyContainer from './CaseStudyContainer'
 import Bottom from './Bottom'
 import Top from './Top'
 
 const CaseStudies = () => {
   return (
-    <div className="case-studies flex flex-col gap-[3em] min-h-[110vh] px-[5em] border-t-[1px] mt-[10vh] border-[#111]">
-        <Top/>
-        <Bottom/>
+    <div
+      className="
+        case-studies flex flex-col
+        gap-[3em]
+        min-h-screen
+        px-[5em] mt-[10vh]
+        border-t-[1px] border-[#111]
+        lg:px-[3em]
+        md:px-[1.5em]
+        sm:px-[1em]
+      "
+    >
+      <Top />
+      <Bottom />
     </div>
   )
 }

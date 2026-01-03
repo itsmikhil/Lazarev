@@ -4,7 +4,7 @@ import Bottom from './Bottom'
 
 const About = () => {
   return (
-    <div className="about min-h-[100vh] w-full flex flex-col  px-[5rem] gap-[0.3rem] mt-[20vh]">
+    <div className="about h-[100vh] lg:h-[250vh] w-full grid grid-cols-12 grid-rows-12 sm:px-[1rem]  px-[5rem] gap-1.5 mt-[20vh] ">
         <Top/>
         <Bottom/>
     </div>

@@ -42,22 +42,22 @@ const VideoContainer = () => {
     })
   }
   return (
-    <div className="video-container relative h-[90vh] w-full overflow-hidden flex items-center justify-center z-[1] ">
+    <div className="video-container relative h-[90vh] w-full overflow-hidden flex items-center justify-center z-[1] md:h-[50vh] ">
       <img
         className="object-cover absolute object-center w-full h-full z-[0]"
         src={thumbnail}
         alt=""
       />
-      <div className="play-container flex flex-col items-center gap-[1vh] z-[1]">
+      <div className="play-container flex flex-col items-center justify-center gap-[1vh] z-[1]">
         <div
           onMouseEnter={hoverAnimationHandler}
           onMouseLeave={hoverAnimationExit}
           onClick={clickAnimationHnadler}
-          className="play text-black bg-white rounded-full text-[3rem] p-[1em] cursor-pointer"
+          className="play text-black bg-white rounded-full text-[3rem] p-[1em] cursor-pointer md:text-[1.5rem] md:p-[0.5em]"
         >
           <IoIosPlay />
         </div>
-        <h1 className=" -translate-x-[30px] bg-white text-black text-[1rem] px-[1.5em] py-[0.5em] rounded-full opacity-0 pointer-events-none">
+        <h1 className=" -translate-x-[30px] bg-white text-black text-[1rem] px-[1.5em] py-[0.5em] rounded-full opacity-0 pointer-events-none md:hidden">
           Show Reel
         </h1>
       </div>

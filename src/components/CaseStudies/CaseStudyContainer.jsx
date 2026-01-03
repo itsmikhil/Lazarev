@@ -23,12 +23,19 @@ const CaseStudyContainer = () => {
   ];
 
   return (
-    <div className="case-study-container w-[70%] flex gap-[6em]">
-      {data.map((el, idx) => {
-        return <CaseStudy el={el} key={idx} />;
-      })}
+    <div
+      className="
+        case-study-container w-[70%]
+        flex gap-[6em]
+        lg:w-full lg:flex-col lg:gap-[4em]
+      "
+    >
+      {data.map((el, idx) => (
+        <CaseStudy el={el} key={idx} />
+      ))}
     </div>
   );
 };
+
 
 export default CaseStudyContainer;

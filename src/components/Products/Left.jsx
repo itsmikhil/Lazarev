@@ -42,7 +42,7 @@ const Left = () => {
     });
   };
   return (
-    <div className="left w-[20%] items-start  flex justify-center ">
+    <div className="left w-[20%] items-start  flex justify-center md:hidden">
       <button
         onMouseEnter={buttonAnimation}
         onMouseLeave={buttonExitAnimation}

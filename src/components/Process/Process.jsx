@@ -61,20 +61,20 @@ const Process = () => {
   return (
     <div className="process bg-white text-black pb-[1em] mt-[10vh]">
       <div className="top w-full flex justify-center">
-        <h1 className="text-[5rem] font-semibold leading-[1.25em] pl-[4.4em]">
+        <h1 className="text-[5rem] font-semibold leading-[1.25em] pl-[4.4em] lg:pl-[0em] md:text-[3rem]">
           Digital Product
           <br />
           Design Process
         </h1>
       </div>
       <div className="bottom flex-col">
-        <div className="section flex justify-between gap-[2em] px-[9em] ">
+        <div className="section flex justify-between gap-[2em] px-[9em] lg:flex-col lg:justify-center lg:items-center lg:pointer-events-none lg:px-[1em] lg:mt-[1rem] ">
           <button
             onMouseEnter={buttonAnimation}
             onMouseLeave={buttonExitAnimation}
-            className="uppercase flex justify-center border-[1px] rounded-full bg-[#4F5BFF] text-white font-semibold h-fit w-[25%] lg:pr-[0.2em] pr-[0.5em]  py-[1em]"
+            className="uppercase flex justify-center border-[1px] rounded-full bg-[#4F5BFF] text-white font-semibold h-fit w-[25%] lg:p-[0.75em] pr-[0.5em]  py-[1em] lg:w-auto"
           >
-            <div className="div flex-col h-[4vh] w-fit inline-block">
+            <div className="div flex-col h-[4vh] w-fit inline-block ">
               <h1 className="h1top_1 inline-block w-fit font-semibold tracking-tighter xl:text-[0.8rem] lg:text-[0.5rem] ">
                 <span className="inline-block">S</span>
                 <span className="inline-block">E</span>
@@ -102,7 +102,7 @@ const Process = () => {
                 <span className="inline-block">E</span>
                 <span className="inline-block">S</span>
               </h1>
-              <h1 className="h1bottom_1 inline-block w-fit font-semibold tracking-tighter xl:text-[0.8rem] lg:text-[0.5rem]">
+              <h1 className="h1bottom_1 inline-block w-fit font-semibold tracking-tighter xl:text-[0.8rem] lg:hidden ">
                 <span className="inline-block">S</span>
                 <span className="inline-block">E</span>
                 <span className="inline-block">E</span>
@@ -134,7 +134,7 @@ const Process = () => {
               <GoArrowUpRight />
             </div>
           </button>
-          <div className="w-[60%] text-[1.5rem]">
+          <div className="w-[60%] text-[1.5rem] lg:w-[90%] lg:text-center lg:items-center md:text-[1rem]">
             <p>
               We do not take on projects that involve blind conformity or
               designing out of context. We won't settle for a user interface
@@ -149,9 +149,9 @@ const Process = () => {
             </p>
           </div>
         </div>
-        <div className="section-bottom flex justify-center h-[44vh] mt-[5vh]">
-          <div className="steps pl-[0.2em] pt-[0.2em] border-[#daddda] h-full border-t-[1px] w-[20%] "></div>
-          <div className="steps pl-[0.2em] pt-[0.2em] border-[#daddda] h-full border-t-[1px] w-[20%] border-l-[1px] flex flex-col gap-[0.2em]">
+        <div className="section-bottom flex justify-center min-h-[44vh] mt-[5vh] lg:hidden">
+          <div className="steps pl-[0.2em] pt-[0.2em] border-[#daddda] h-full border-t-[1px] w-[40%] "></div>
+          <div className="steps pl-[0.2em] pt-[0.2em] border-[#daddda] h-full border-t-[1px] w-[50%] border-l-[1px] flex flex-col gap-[0.2em]">
             <p>Product Strategy</p>
             <div className="step xl:text-[0.8rem] text-[1rem] w-[90%] bg-[#111111]  text-white inline-flex rounded-full justify-start px-[1em] py-[0.5em] gap-[0.5em]">
               <p className="bg-[#333333] rounded-full inline-block px-[0.5em]">
@@ -190,7 +190,7 @@ const Process = () => {
               <h3 className="font-semibold">Functional Decomposition</h3>
             </div>
           </div>
-          <div className="steps pl-[0.2em] pt-[0.2em] border-[#daddda] h-full border-t-[1px] w-[15%] border-l-[1px] flex flex-col gap-[0.2em]">
+          <div className="steps pl-[0.2em] pt-[0.2em] border-[#daddda] h-full border-t-[1px] w-[45%] border-l-[1px] flex flex-col gap-[0.2em]">
             <p>UX Design</p>
             <div className="step xl:text-[0.8rem] text-[1rem] w-[80%] translate-x-[0%] bg-[#111111]  text-white inline-flex rounded-full justify-start px-[1em] py-[0.5em] gap-[0.5em]">
               <p className="bg-[#333333] rounded-full inline-block px-[0.5em]">
@@ -205,7 +205,7 @@ const Process = () => {
               <h3 className="font-semibold">Prototyping</h3>
             </div>
           </div>
-          <div className="steps pl-[0.2em] pt-[0.2em] border-[#daddda] h-full border-t-[1px] w-[15%] border-l-[1px] flex flex-col gap-[0.2em]">
+          <div className="steps pl-[0.2em] pt-[0.2em] border-[#daddda] h-full border-t-[1px] w-[55%] border-l-[1px] flex flex-col gap-[0.2em]">
             <p>UI Design</p>
             <div className="step xl:text-[0.8rem] w-[80%] translate-x-[0%] bg-[#111111]  text-white inline-flex rounded-full justify-start px-[1em] py-[0.5em] gap-[0.5em]">
               <p className="bg-[#333333] rounded-full inline-block px-[0.5em]">
@@ -226,7 +226,7 @@ const Process = () => {
               <h3 className="font-semibold">Hand-off</h3>
             </div>
           </div>
-          <div className="steps pl-[0.2em] pt-[0.2em] border-[#daddda] h-full border-t-[1px] w-[10%] border-l-[1px]">
+          <div className="steps pl-[0.2em] pt-[0.2em] border-[#daddda] h-full border-t-[1px] w-[50%] border-l-[1px]">
             Delivery
           </div>
         </div>

@@ -5,7 +5,7 @@ const BottomBox = ({el}) => {
 
 
   return (
-    <div className="bottom-box flex flex-col justify-between bg-[#1F1F1F] w-[49.8%] min-h-[45vh] p-[2rem] rounded-[1rem]">
+    <div className="bottom-box flex flex-col justify-between bg-[#1F1F1F] col-span-1 lg:col-span-2 p-[2rem] rounded-[1rem]">
         <div className="top-content">
           <p className="text-[#505050] text-[0.8rem] font-semibold">{topnum}</p>
         </div>

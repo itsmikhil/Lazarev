@@ -8,11 +8,34 @@ let data = [
 ];
 
 const CountDiv = () => {
-  return <div className="count-div w-[20%] sticky top-[10%] h-[20vh]">
-    {data.map((el,idx)=>{
-        return <div key={idx} className="count flex border-b-[1px] justify-between cursor-pointer"><p>{el.type}</p><p>[{el.count}]</p></div>
-    })}
-  </div>;
+  return (
+    <div
+      className="
+        count-div w-[20%] h-fit
+        sticky top-[10%]
+        flex flex-col gap-[1em]
+        lg:w-full lg:relative lg:flex-row lg:gap-[2em]
+        md:flex-wrap
+      "
+    >
+      {data.map((el, idx) => (
+        <div
+          key={idx}
+          className="
+            count flex justify-between
+            border-b-[1px] border-[#2c2828]
+            pb-[0.6em]
+            cursor-pointer
+            text-[1rem]
+            md:border md:rounded-full md:px-[1em] md:py-[0.4em]
+          "
+        >
+          <p>{el.type}</p>
+          <p>[{el.count}]</p>
+        </div>
+      ))}
+    </div>
+  );
 };
 
 export default CountDiv;

@@ -32,7 +32,7 @@
       <div
         onMouseEnter={animationHandler1}
         onMouseLeave={animationHandler2}
-        className="topbox bg-[#1F1F1F] w-[33%] min-h-[55vh] overflow-hidden p-[2rem] relative z-[1] rounded-[1rem]"
+        className="topbox bg-[#1F1F1F] lg:col-span-3 overflow-hidden p-[2rem] relative z-[1] rounded-[1rem]"
       >
         <video
           ref={videoRef}

@@ -15,7 +15,7 @@ const Bottom = () => {
         },
       ];
   return (
-    <div className="bottom flex justify-between  ">
+    <div className="bottom  col-span-12 row-span-5 grid grid-cols-2 gap-1  ">
         {data.map((el,idx)=>{
             return <BottomBox el={el} key={idx}/>
         })}

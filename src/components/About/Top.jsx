@@ -27,7 +27,7 @@ const Top = () => {
   ];
 
   return (
-    <div className="top flex justify-between">
+    <div className="top col-span-12 row-span-6 grid grid-cols-3 gap-1">
       {data.map((el, idx) => {
         return <TopBox el={el} key={idx}/>;
       })}

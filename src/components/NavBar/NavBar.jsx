@@ -86,16 +86,16 @@ const NavBar = () => {
     <div
       onMouseEnter={NavBarAnimation}
       onMouseLeave={NavBarAnimationExit}
-      className="nav-bar fixed top-0 left-0  min-w-full px-[5em] pt-[2em] bg-[#111111] z-[99]  xl:pointer-events-none  "
+      className="nav-bar fixed top-0 left-0  w-screen px-[5em] pt-[2em] bg-[#111111] z-[99]  xl:pointer-events-none md:px-[2em] md:py-[0.5em]  "
     >
-      <div className="container w-full flex justify-between items-start border-b-[1px] border-white xl:border-0 ">
-        <h1 className="font-extrabold text-[1.5rem] leading-none">LAZAREV.</h1>
+      <div className="container w-full flex justify-between items-start border-b-[1px] border-white xl:border-0 md:justify-center ">
+        <h1 className="font-extrabold text-[1.5rem] md:text-[2rem] leading-none">LAZAREV.</h1>
         <div className="nav-options flex gap-[1.5em] xl:hidden">
           {data.map((el, idx) => {
             return <NavOption el={el} key={idx} />;
           })}
         </div>
-        <button className="bg-[#0BA34E] rounded-full text-[1.2rem] inline-flex px-[1.3em] py-[0.8em] justify-center items-center gap-[1em] ">
+        <button className="bg-[#0BA34E] rounded-full text-[1.2rem] inline-flex px-[1.3em] py-[0.8em] justify-center items-center gap-[1em] md:hidden ">
           <p className="text-[0.9rem] font-semibold">Let's Talk</p>
           <MdModeEditOutline />
         </button>

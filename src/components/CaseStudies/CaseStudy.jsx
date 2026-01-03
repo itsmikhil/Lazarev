@@ -1,4 +1,4 @@
-import React, { useReducer, useRef } from "react";
+import React, { useRef } from "react";
 import gsap from "gsap";
 
 const CaseStudy = ({ el }) => {
@@ -9,41 +9,21 @@ const CaseStudy = ({ el }) => {
   let videoAnimationHandler = () => {
     gsap.to(videoRef.current, {
       height: "60vh",
-      transformOrigin: "bottom",
-      scaleY: "1",
+      scaleY: 1,
       opacity: 1,
       duration: 0.4,
-      ease: "power1.in",
     });
-    gsap.to(boxRef.current, {
-      opacity: 0,
-      duration: 0.2,
-      ease: "power1.in",
-    });
+    gsap.to(boxRef.current, { opacity: 0, duration: 0.2 });
     videoRef.current.play();
   };
+
   let videoExitAnimationHandler = () => {
-    let tl = gsap.timeline();
-    tl.to(videoRef.current, {
-      transformOrigin: "top",
+    gsap.to(videoRef.current, {
       height: "38vh",
       opacity: 0,
       duration: 0.4,
-      ease: "power1.in",
     });
-        // tl.to(videoRef.current, {
-        
-        //   duration: 0.3,
-        //   ease: "power1.out",
-        // });
-
-    gsap.to(boxRef.current, {
-      opacity: 1,
-      duration: 0.12,
-      delay: 0.35,
-      ease: "power1.in",
-    });
-
+    gsap.to(boxRef.current, { opacity: 1, delay: 0.35, duration: 0.12 });
     videoRef.current.pause();
     videoRef.current.currentTime = 0;
   };
@@ -52,24 +32,59 @@ const CaseStudy = ({ el }) => {
     <div
       onMouseEnter={videoAnimationHandler}
       onMouseLeave={videoExitAnimationHandler}
-      className="case-study flex flex-col gap-[4em] min-h-[40vh]"
+      className="
+        case-study flex flex-col
+        gap-[3em]
+        min-h-[40vh]
+      "
     >
-      <h1 className="text-[2rem] font-semibold w-[80%]">{title}</h1>
-      <div className="contain relative h-[60vh] flex flex-col gap-[5vh] justify-between overflow-hidden">
-        <p className="text-[1.2rem]  text-[#989898]">{para}</p>
+      <h1
+        className="
+          font-semibold
+          text-[2rem]
+          w-[80%]
+          md:w-full
+          md:text-[1.6rem]
+          sm:text-[1.3rem]
+        "
+      >
+        {title}
+      </h1>
+
+      <div
+        className="
+          contain relative flex flex-col justify-between
+          h-[60vh]
+          md:h-auto md:gap-[2em]
+        "
+      >
+        <p className="text-[1.2rem] md:text-[1rem] text-[#989898]">
+          {para}
+        </p>
+
         <img
           ref={boxRef}
-          className="w-full h-[40vh] object-cover object-center"
+          className="
+            w-full h-[40vh]
+            md:h-[28vh]
+            object-cover
+          "
           src={image}
           alt=""
         />
+
         <video
           ref={videoRef}
           muted
           autoPlay
-          className=" h-[40vh] absolute w-full bottom-0  object-cover opacity-[0]"
+          className="
+            absolute bottom-0 w-full
+            h-[40vh]
+            md:hidden
+            object-cover opacity-0
+          "
           src={video}
-        ></video>
+        />
       </div>
     </div>
   );
